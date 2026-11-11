@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Product localStorage</title>
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="page__title">
+        Vanilla JavaScript and LocalStorage CRUD project
+      </h1>
+      <section class="page__content">
+        <article class="product">
+          <form class="product__entry">
+            <div class="product__field">
+              <label class="product__label" for="product-code"
+                >Product Code</label
+              >
+              <input
+                id="product-code"
+                name="product-code"
+                class="product__input"
+                type="number"
+                inputmode="numeric"
+                placeholder="only numbers..."
+                required
+              />
+            </div>
+            <div class="product__field">
+              <label class="product__label" for="product-name"
+                >Product Name</label
+              >
+              <input
+                id="product-name"
+                name="product-name"
+                class="product__input"
+                type="text"
+                pattern=".*\S.*"
+                required
+              />
+            </div>
+            <div class="product__field">
+              <label class="product__label" for="product-quantity"
+                >Product Quantity</label
+              >
+              <input
+                id="product-quantity"
+                name="product-quantity"
+                class="product__input"
+                type="number"
+                inputmode="numeric"
+                min="0"
+                required
+              />
+            </div>
+            <div class="product__buttons">
+              <button class="button button--insert" type="submit">
+                Insert new
+              </button>
+              <button class="button button--edit" type="submit">
+                Edit item
+              </button>
+              <button class="button button--delete" type="submit">
+                Delete from LS
+              </button>
+            </div>
+          </form>
+          <table class="product__table"></table>
+        </article>
+        <article class="product-search">
+          <h2 class="product-search__title">Find Product by Code</h2>
+          <form class="product-search__entry">
+            <div class="product-search__field">
+              <label class="product-search__label" for="product-code-search"
+                >Product Code</label
+              >
+              <input
+                id="product-code-search"
+                name="product-code-search"
+                class="product-search__input"
+                type="number"
+                inputmode="numeric"
+                placeholder="only numbers..."
+                required
+              />
+            </div>
+            <div class="product-search__buttons">
+              <button class="button product-search__button" type="submit">
+                Select from LS
+              </button>
+            </div>
+          </form>
+          <table class="product-search__table"></table>
+        </article>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
